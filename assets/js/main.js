@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-    window.owner_name = "Firstname M. Surename";
+    window.owner_name = "Eitan Wagner";
 
     var path = window.location.pathname;
     var page = path.split("/").pop();
