@@ -2,10 +2,9 @@ jQuery(document).ready(function($){
     window.owner_name = "Eitan Wagner";
 
     var path = window.location.pathname;
-    var page = path.split("/").pop();
 
-
-    if (page == 'index.html'){
+    // Root-level pages (index.html or "/") get the full navbar; pages under /projects/ get the smaller one
+    if (path.indexOf('/projects/') === -1){
         //    Navbar
         $.get("elements/nav.html", function(data){
             $("#nav-placeholder").replaceWith(data);
